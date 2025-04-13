@@ -107,3 +107,55 @@ function renderFooter() {
     document.getElementById('footer-text').textContent = portfolioData.footer.text;
 }
 
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const messageDiv = document.getElementById('form-message');
+    const submitText = document.getElementById('submit-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+
+    // Mostrar spinner e desativar botão
+    submitText.textContent = 'Sending...';
+    submitSpinner.classList.remove('d-none');
+    form.querySelector('button[type="submit"]').disabled = true;
+
+    // Resetar mensagem anterior
+    messageDiv.classList.remove('show', 'alert-success', 'alert-danger');
+
+    emailjs.sendForm('service_vgwl5r6', 'template_akiwqid', form)
+        .then(function() {
+            // Sucesso - mostrar mensagem customizada
+            showMessage(
+                '✅ Message sent successfully! I will contact you soon.',
+                'success'
+            );
+
+            // Resetar formulário
+            form.reset();
+        }, function(error) {
+            // Erro - mostrar mensagem customizada
+            showMessage(
+                '❌ Error sending message. Please try again or contact me directly at your@email.com',
+                'danger'
+            );
+        })
+        .finally(function() {
+            // Restaurar botão
+            submitText.textContent = 'Send Message';
+            submitSpinner.classList.add('d-none');
+            form.querySelector('button[type="submit"]').disabled = false;
+        });
+});
+
+function showMessage(text, type) {
+    const messageDiv = document.getElementById('form-message');
+    alert('Mensagem Enviada!')
+    messageDiv.textContent = text;
+    messageDiv.classList.add('show', `alert-${type}`);
+
+    // Esconder mensagem após 5 segundos
+    setTimeout(() => {
+        messageDiv.classList.remove('show');
+    }, 10000);
+}

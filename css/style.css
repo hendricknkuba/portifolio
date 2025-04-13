@@ -223,6 +223,24 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Estilo para a mensagem de status */
+#form-message {
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+#form-message.show {
+  opacity: 1;
+  transform: translateY(0);
+  color: white;
+}
+
+/* Spinner de carregamento */
+.spinner-border {
+  vertical-align: middle;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   section {
