@@ -45,6 +45,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', initAnimations);
     initAnimations(); // Run once on load
+
+    const video = document.querySelector('.video-background video');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(video);
+
+    const videoTime = document.getElementById('bg-video');
+
+    // Defina a velocidade fixa aqui (ex: 0.8 para 80% da velocidade)
+    videoTime.playbackRate = 0.7; // ◄ Altere este valor conforme necessário
+
+    // Força o recomeço do vídeo para aplicar a velocidade
+    videoTime.play().then(() => {
+        videoTime.currentTime = 0;
+    });
 });
 
 // Render Functions
