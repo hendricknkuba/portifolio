@@ -6,7 +6,7 @@ const portfolioData = {
         description: "Building modern, responsive and user-centric web applications with clean code and thoughtful design."
     },
     about: {
-        text1: "I'm a passionate full-stack developer with 3+ years of experience creating digital solutions that solve real problems. My approach combines technical excellence with user-centered design principles.",
+        text1: "I'm a passionate full-stack developer with years of experience creating digital solutions that solve real problems. My approach combines technical excellence with user-centered design principles.",
         text2: "Specializing in JavaScript ecosystems, I build everything from small business websites to complex web applications. Committed to continuous learning and clean code practices."
     },
     skills: [
