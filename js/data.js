@@ -35,14 +35,14 @@ const portfolioData = {
         },
         {
             title: "Course Management System",
-            description: "web-based system designed to streamline the management of short-duration courses. It provides an intuitive platform for administrators to efficiently organize, monitor, and administer short courses.",
+            description: "Web-based system designed to streamline the management of short-duration courses. It provides an intuitive platform for administrators to efficiently organize, monitor, and administer short courses.",
             tags: ["Vue.js", "Inertia.js", "Laravel", "MySQL", "Tailwind CSS"],
             link: "#"
         },
         {
             title: "Weather App",
             description: "Real-time weather information with 5-day forecast using the OpenWeather API. Features geolocation and city search.",
-            tags: ["Vue.js", "API Integration", "API Integration", "Tailwind CSS"],
+            tags: ["Vue.js", "API Integration", "HTML", "Tailwind CSS"],
             link: "https://weather-ds.netlify.app/"
         },
         {
