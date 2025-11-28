@@ -156,6 +156,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             );
 
             // Resetar formulário
+            // TODO: Formulario nao reseta depois de mensagem enviada
             form.reset();
         }, function(error) {
             // Erro - mostrar mensagem customizada
