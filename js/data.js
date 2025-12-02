@@ -2,7 +2,7 @@
 const portfolioData = {
     hero: {
         title: "Hendrick Nkuba",
-        subtitle: "Web Developer",
+        subtitle: "Web Developer • Full-Stack Enthusiast",
         description: "Building modern, responsive and user-centric web applications with clean code and thoughtful design."
     },
     about: {
@@ -59,14 +59,15 @@ const portfolioData = {
 
 function applyAnimations() {
     // Aplica efeitos a todos os elementos que devem animar
-    const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, .card, img');
+    const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, .card');
     elements.forEach((el, index) => {
         el.setAttribute('data-aos', 'fade-up');
         el.setAttribute('data-aos-delay', Math.min(index * 50, 300));
     });
 
     // Efeito especial para a imagem de perfil
-    document.querySelector('.profile-image').setAttribute('data-aos', 'fade-left');
+    const heroImg = document.querySelector('.hero-profile');
+    if (heroImg) heroImg.setAttribute('data-aos', 'fade-left');
 }
 
 applyAnimations();
