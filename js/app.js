@@ -73,9 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Render Functions
 function renderHero() {
-    document.getElementById('hero-title').textContent = portfolioData.hero.title;
-    document.getElementById('hero-subtitle').textContent = portfolioData.hero.subtitle;
-    document.getElementById('hero-description').textContent = portfolioData.hero.description;
+    const titleEl = document.querySelector('.hero-title');
+    const subtitleEl = document.querySelector('.hero-subtitle');
+    const eyebrowEl = document.querySelector('.hero-eyebrow');
+
+    if (titleEl) titleEl.textContent = portfolioData.hero.title;
+    if (subtitleEl) subtitleEl.textContent = portfolioData.hero.description;
+    if (eyebrowEl) eyebrowEl.textContent = portfolioData.hero.subtitle;
 }
 
 function renderAbout() {
