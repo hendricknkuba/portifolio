@@ -1,0 +1,93 @@
+/* =========================================================
+   COMPONENT: CARDS
+   ========================================================= */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: var(--blur);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 25px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card h5 { color: var(--text-bright); }
+.card p { color: var(--text-muted); }
+
+/* =========================================================
+   COMPONENT: BUTTONS
+   ========================================================= */
+.btn-primary {
+  background: var(--grad-primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+}
+
+.btn-primary:hover { opacity: .85; }
+
+/* =========================================================
+   COMPONENT: BADGES
+   ========================================================= */
+.badge {
+  background: rgba(148,163,184,.12);
+  color: var(--text-muted);
+  border: 1px solid var(--border-glass);
+  padding: .45rem .7rem;
+  border-radius: var(--radius-md);
+}
+
+/* =========================================================
+   COMPONENT: FORMS
+   ========================================================= */
+.contact-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: var(--blur);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.form-control {
+  background: var(--bg-input);
+  border: 1px solid var(--border-glass);
+  color: var(--text-bright);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #6366f1;
+  box-shadow: none;
+}
+
+/* =========================================================
+   COMPONENT: SOCIAL ICONS
+   ========================================================= */
+.social-icon {
+  font-size: 1.5rem;
+  margin: 0 7px;
+  color: var(--text-bright) !important;
+}
+
+.social-icon:hover { color: #818cf8 !important; }
+
+/* =========================================================
+   COMPONENT: ANIMATIONS (AOS)
+   ========================================================= */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .6s ease-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}

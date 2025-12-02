@@ -1,0 +1,63 @@
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+:root {
+  --bg-dark: #050816;
+  --bg-darker: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --bg-input: rgba(30, 41, 59, .5);
+
+  --text-bright: #ffffff;
+  --text-muted: #94a3b8;
+
+  --border-glass: rgba(148,163,184,.25);
+
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --blur: blur(18px);
+
+  --shadow-soft: 0 0 40px rgba(0,0,0,.45);
+  --shadow-hover: 0 0 60px rgba(0,0,0,.6);
+
+  --grad-primary: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  --fast: .3s ease;
+}
+
+/* =========================================================
+   BASE / GLOBAL
+   ========================================================= */
+body {
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
+  color: var(--text-bright);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+               Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+img { display: block; max-width: 100%; }
+
+/* Shared transitions */
+.navbar, .card, .btn, .hero-profile {
+  transition: all var(--fast);
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-bright);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #818cf8;
+  display: block;
+  margin: 10px auto 0;
+}
